@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <div class="todo">
+            <div class="it">
+                <ul id="items">
+                
+                </ul>
+            </div>
+            
+    
+    
+            <input type="text"  id="producto" >
+    
+            <input type="button"  id="agregarr" value="Agregar" onclick= "agregar()">
+            <br>
+            <br>
+            <input type="text" id="text" >
+            <div class="botones">
+                <input type="button" value="Quitar"  id="sacarr" onclick="sacar()" >
+                <input type="button" value="Borrar Todo"  id="borrar" onclick="borrar()" >
+            </div>
+
+        </div>
+        
+    </main>
+    <script>
+
+        function agregar(){
+            listaP=document.getElementById('items');
+            contenedor=document.createElement('li');
+            dato1=document.getElementById('producto');
+            contenedor.textContent=dato1.value;
+            listaP.appendChild(contenedor);
+        } 
+
+        function sacar(){
+            listaP=document.getElementById('items');
+            quit=document.getElementById('text');
+            quit.value=+1;
+            listaP.removeChild(listaP.children[quit.value]);
+        }
+
+        function borrar(){
+            listaP=document.getElementById('items');
+            contenedor=document.getElementsByTagName('li');
+            listaP.remove(contenedor);
+        }
+    </script>
+</body>
+</html>
